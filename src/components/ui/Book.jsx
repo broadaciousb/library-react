@@ -2,6 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Book = ({ book }) => {
+  const rating = 4;
+
+
   return (
     <div className="book">
       <a href="">
@@ -15,11 +18,9 @@ const Book = ({ book }) => {
         </a>
       </div>
       <div className="book__ratings">
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star-half-alt" />
+        {
+          new Array(5).fill(0).map((_, index)=> <FontAwesomeIcon icon="star" key={index} />)
+        }
       </div>
       <div className="book__price">
         {book.salePrice ? (
