@@ -8,13 +8,13 @@ const Book = ({ book }) => {
 
   return (
     <div className="book">
-      <Link href="">
+      <Link to="/books/1">
         <figure className="book__img--wrapper">
           <img src={book.url} alt="" className="book__img" />
         </figure>
       </Link>
       <div className="book__title">
-        <Link href="/" className="book__title--link">
+        <Link to="/" className="book__title--link">
           {book.title}
         </Link>
       </div>
